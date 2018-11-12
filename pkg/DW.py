@@ -157,17 +157,17 @@ def demo():
 
     data = datasets.load_iris()
 
-    X = data.data[:,:]  # we only take the first two features.  all
+    X = data.data[:, :]  # we only take the first two features.  all
     Y = data.target
 
     N = len(X)
 
-    d = numpy.empty((N-1), dtype=object)
-    for i in range(N-1):
-        line = numpy.array([X[i],numpy.array([Y[i]])])
+    d = numpy.empty((N - 1), dtype=object)
+    for i in range(N - 1):
+        line = numpy.array([X[i], numpy.array([Y[i]])])
         d[i] = line
 
-    #print(d)
+    # print(d)
 
     # create a network with two input, two hidden, and one output nodes
     n = NN(4, 2, 1)
